@@ -1,0 +1,11 @@
+{
+  "name": "lib",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "angular-ui-router": "~0.2.15",
+    "lodash": "~4.13.1"
+  }
+}

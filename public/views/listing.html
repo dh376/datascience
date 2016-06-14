@@ -1,0 +1,18 @@
+<div class="recipe-container" ng-click="check(recipe)" ng-class="{checked: recipe.checked}">
+	<h2>
+		{{recipe.name}}
+	</h2>
+	<p>
+		{{recipe.type}}
+	</p>
+	<p>
+		Cook time: {{recipe.cook_time}}
+	</p>
+	<div class="ingredients">
+		<ul>
+			<li class="each-ingredients" ng-repeat="i in recipe.ingredients">
+			{{i}}
+			</li>
+		</ul>
+	</div>
+</div>
