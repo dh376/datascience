@@ -31,7 +31,7 @@ angular.module('myApp.services', []).
       $window.localStorage.selectedRecipeNames = JSON.stringify($rootScope.selectedRecipeNames);
     }
 
-      
+
 
   	return {
 
@@ -141,7 +141,11 @@ angular.module('myApp.services', []).
           }
         }
 
-        $rootScope.selectedRecipeNames = JSON.parse($window.localStorage.selectedRecipeNames);
+        if ($window.localStorage.selectedRecipeNames === undefined) {
+          $rootScope.selectedRecipeNames = [];
+        } else {
+          $rootScope.selectedRecipeNames = JSON.parse($window.localStorage.selectedRecipeNames);
+        }
         if (!($rootScope.selectedRecipeNames instanceof Array)){
           $rootScope.selectedRecipeNames = [];
         }
